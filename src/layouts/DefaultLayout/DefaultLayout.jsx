@@ -1,16 +1,18 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet } from "react-router-dom";
+import { Navbar } from "../../components";
 
 const DefaultLayout = () => {
   return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-      </nav>
+    <>
+      <header>
+        <Link to="/" className="site-logo">
+          #VANLIFE
+        </Link>
+        <Navbar />
+      </header>
+      <Outlet />
+    </>
+  );
+};
 
-      <Outlet/>
-    </div>
-  )
-}
-
-export default DefaultLayout
+export default DefaultLayout;
